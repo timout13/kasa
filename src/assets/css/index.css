@@ -67,5 +67,26 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.announceDetail_carousel {
+  position: relative;
+}
+.announceDetail_carousel_btnWp {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.announceDetail_carousel_imgWp {
+  display: flex;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.announceDetail_carousel_imgWp_img {
+  width: 1200px;
+  height: auto;
+  object-fit: cover;
+  min-width: 100%;
+  object-position: center;
+}
 
 /*# sourceMappingURL=index.css.map */

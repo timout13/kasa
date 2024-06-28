@@ -1,0 +1,26 @@
+.announceDetail {
+  &_title {
+  }
+  &_carousel {
+    position: relative;
+    &_btnWp {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &_imgWp {
+      display: flex;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 25px;
+
+      &_img {
+        width: 1200px;
+        height: auto;
+        object-fit: cover;
+        min-width: 100%;
+        object-position: center;
+      }
+    }
+  }
+}
