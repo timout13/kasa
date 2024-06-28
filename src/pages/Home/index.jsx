@@ -1,39 +1,26 @@
-import {useEffect, useState} from 'react'
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useEffect, useState} from 'react';
 import '../../App.css'
-import { useFetch } from '../../utils/hooks/index.jsx'
+import {useFetch} from '../../utils/hooks/index.jsx';
+import Location from "../../components/location/location.jsx";
 
 function Home() {
-    const [count, setCount] = useState(0);
-    const [locations, setLocations] = useState([]);
-    const { data, isLoading,error } = useFetch(`/api/logements.json`)
+    const [locations, setLocations] = useState({});
+    const {data, isLoading, error} = useFetch(`/api/logements.json`);
+    const isObjNotEmpty = (obj) => {
+        return Object.keys(obj).length > 0;
+    }
     useEffect(() => {
-        setLocations(data);
-    }, []);
-    console.log(data);
+        data && setLocations(data);
+    }, [data]);
+    console.log(locations)
     return (
         <>
-            <div>
-                <a href="https://vitejs.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo"/>
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo"/>
-                </a>
+            <div className="location_wrapper"
+                 style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px"}}>
+                {isObjNotEmpty(locations) && locations.map((location, index) => (
+                    <Location key={`${location}-${index}`} location={location}/>
+                ))}
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
         </>
     )
 }
