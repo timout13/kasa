@@ -1,9 +1,11 @@
 .content {
+  background-color: gray;
   overflow: hidden;
   height: 0;
   transition: height 1s ease-out, opacity 1s ease-out;
   opacity: 0;
   max-height: fit-content;
+  color: black;
 }
 
 .content.open {
@@ -11,5 +13,8 @@
 }
 
 summary {
+  background-color: #FF6060;
+  border-radius: 5px;
   cursor: pointer;
+  padding: 10px;
 }

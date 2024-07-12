@@ -3,21 +3,21 @@ import {useRef, useState, useEffect} from "react";
 function Collapse({title, children}) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
-    const detailRef = useRef(null);
 
     const handleToggle = () => {
-        const isOpen = detailRef.current.open;
-        console.log(isOpen)
-        if (isOpen) {
-            contentRef.current.style.height = '0px';
-        } else {
-            contentRef.current.style.height = `1000px`;
-        }
+        setIsOpen((prevIsOpen) => !prevIsOpen);
     };
 
+    useEffect(() => {
+        if (isOpen) {
+            contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+        } else {
+            contentRef.current.style.height = '0px';
+        }
+    }, [isOpen]);
     return (
         <>
-            <details ref={detailRef} onClick={handleToggle}>
+            <details open={isOpen} onClick={handleToggle}>
                 <summary>Click to expand</summary>
             </details>
             <div
