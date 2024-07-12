@@ -1,6 +1,5 @@
 
 function Hero({img,title}) {
-    console.log(title);
     return (
         <>
             {img && title ? (

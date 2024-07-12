@@ -1,63 +1,15 @@
-.collapse{
-  &-details{
-    max-width: 500px;
-    overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
-    &[open] + .collapse-content{
-      max-height: fit-content; /* Set a max-height value enough to show all the content */
-      max-height: 800px; /* Set a max-height value enough to show all the content */
-      transition: max-height 400ms ease-out, border 0ms linear;
-    }
-    &[open] .collapse-details-summary-title::before {
-      rotate: 180deg;
-      transition: rotate 200ms ease-out;
-    }
-    &[open] .collapse-details-summary-title {
-      border-radius: 5px 5px 0px 0px ;
-      transition: border-radius 400ms ease-out;
-    }
-    &-summary{
-      display: block;
-      &::-webkit-details-marker{
-        display: none;
-      }
-      &-title{
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: fit-content;
-        padding: 10px;
-        font-size: 18px;
-        font-weight: 800;
-        background: #FF6060;
-        border-radius: 5px;
-        color: white;
-        transition: border-radius 400ms ease-out;
-        &:hover{
-          cursor: pointer;
-        }
-        &::before {
-          content: url("/src/assets/img/icons/arrow_top.svg");
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          margin-right: 0.5rem;
-          position: absolute;
-          right: 2px;
-          transition: rotate 200ms 400ms ease-out;
-        }
-      }
-    }
-  }
-  &-content{
-    box-sizing: border-box;
-    max-width: 500px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 400ms ease-out;
-    p{
-      background: #FBFBFB;
-      border-radius: 0px 0px 5px 5px;
-      padding: 20px 20px 20px 20px;
-    }
-  }
+.content {
+  overflow: hidden;
+  height: 0;
+  transition: height 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  max-height: fit-content;
+}
+
+.content.open {
+  opacity: 1;
+}
+
+summary {
+  cursor: pointer;
 }
