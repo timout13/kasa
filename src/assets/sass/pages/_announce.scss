@@ -3,23 +3,28 @@
   }
   &_carousel {
     position: relative;
+    width: 100%;
     &_btnWp {
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
     }
     &_imgWp {
       display: flex;
+      width: 100%;
       height: 400px;
       overflow: hidden;
       border-radius: 25px;
-
-      &_img {
-        width: 1200px;
-        height: auto;
-        object-fit: cover;
-        min-width: 100%;
-        object-position: center;
+      &_slider{
+        display: flex;
+        transition: transform ease-in-out 1s;
+        &_img {
+          height: auto;
+          object-fit: cover;
+          //min-width: 100%;
+          object-position: center;
+        }
       }
     }
   }

@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-import '../../App.css'
 import {useFetch} from '../../utils/hooks/index.jsx';
 import Location from "../../components/location/location.jsx";
 
