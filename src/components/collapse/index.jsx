@@ -4,7 +4,8 @@ function Collapse({title, children}) {
     const [isOpen, setIsOpen] = useState(false);
     const contentRef = useRef(null);
 
-    const handleToggle = () => {
+    const handleToggle = (e) => {
+        e.preventDefault();
         setIsOpen((prevIsOpen) => !prevIsOpen);
     };
 
@@ -17,7 +18,7 @@ function Collapse({title, children}) {
     }, [isOpen]);
     return (
         <>
-            <details open={isOpen} onClick={handleToggle}>
+            <details open={isOpen == true ? true: null} onClick={(e)=>handleToggle(e)}>
                 <summary>Click to expand</summary>
             </details>
             <div
