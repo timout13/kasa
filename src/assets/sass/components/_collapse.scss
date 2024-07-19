@@ -61,3 +61,25 @@
     }
   }
 }
+.content {
+  background-color: #FBFBFB;
+  overflow: hidden;
+  height: 0;
+  transition: height 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  max-height: fit-content;
+  color: black;
+  max-width: 500px;
+  border: 0;
+}
+
+.content.open {
+  opacity: 1;
+}
+
+summary {
+  background-color: #FF6060;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
