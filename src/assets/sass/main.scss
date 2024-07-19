@@ -1,7 +1,6 @@
 @import "utils/variables";
 @import "base/normalize";
 @import "base/typo";
-@import "layouts/section";
 @import "layouts/header";
 @import "layouts/footer";
 @import "pages/home";
@@ -9,3 +8,5 @@
 @import "pages/about";
 @import "components/buttons";
 @import "components/collapse";
+@import "components/tag";
+@import "layouts/section";

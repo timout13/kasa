@@ -1,14 +1,84 @@
 .announceDetail {
-  &_title {
+  &_infos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-block: 30px 50px;
+    &_right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+      &_profile{
+        display: flex;
+        gap: 10px;
+        p{
+          align-self: center;
+          @include font-announce-profile();
+        }
+        img{
+          width: 64px;
+          height: 64px;
+          border-radius: 100%;
+        }
+      }
+      &_starsWp{
+        display: flex;
+        gap: 15px;
+        .star{}
+      }
+    }
+    &_left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 20px;
+      &_titles {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &_title {
+          @include font-announce-title();
+        }
+        &_subtitle {
+          @include font-announce-subtitle();
+        }
+      }
+      &_tagWp{
+        display: flex;
+        gap: 10px;
+      }
+    }
+    &_collapsesWp{
+      flex:100%;
+    }
   }
+
   &_carousel {
     position: relative;
     width: 100%;
+    margin-top: 50px;
     &_btnWp {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 100px;
       z-index: 1;
+      width: calc(100% - 200px);
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    &_currentImg{
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      z-index: 1;
+      transform: translateX(-50%);
     }
     &_imgWp {
       display: flex;
@@ -16,9 +86,11 @@
       height: 400px;
       overflow: hidden;
       border-radius: 25px;
-      &_slider{
+
+      &_slider {
         display: flex;
         transition: transform ease-in-out 1s;
+
         &_img {
           height: auto;
           object-fit: cover;

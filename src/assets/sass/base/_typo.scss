@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* * PAGES * */
+// Announce
+@mixin font-announce-title(){
+  font-size: 36px;
+  color: $color-primary;
+  font-weight: 500;
+}
+@mixin font-announce-subtitle(){
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+@mixin font-announce-profile(){
+  font-size: 18px;
+  font-weight: 500;
+  color: $color-primary;
+  max-width: 120px;
+  text-align: end;
+}
+
+/* * COMPONENTS * */
+
+@mixin font-tag(){
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+}

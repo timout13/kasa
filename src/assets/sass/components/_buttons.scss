@@ -1,3 +1,13 @@
 .btn{
-  &_arrow{}
+  &_arrow{
+    background: 0;
+    border: 0;
+    height: 80px;
+    &--prev{
+      padding-inline: 20px 0;
+    }
+    &--next{
+      padding-inline: 0 20px;
+    }
+  }
 }

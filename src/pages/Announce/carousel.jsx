@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from "react";
-import arrowLeft from "../../assets/img/icons/arrow_right.svg";
+import arrowLeft from "../../assets/img/icons/arrow_left.svg";
+import arrowRight from "../../assets/img/icons/arrow_right.svg";
 
 function Carousel({announce}) {
     const [currentId, setCurrentId] = useState(0);
@@ -55,32 +56,19 @@ function Carousel({announce}) {
     };
 
     return (
-        <>
-            <div className="announceDetail_carousel">
+
+            <section className="announceDetail_carousel section_py">
                 {totalImgs > 1 &&
                     <>
                         <div className="announceDetail_carousel_btnWp">
-                            <button className="btn btn_arrow" onClick={() => test('prev')}>
+                            <button className="btn btn_arrow btn_arrow--prev" onClick={() => test('prev')}>
                                 <img src={arrowLeft}/>
                             </button>
-                            <button className="btn btn_arrow" onClick={() => test('next')}>next</button>
+                            <button className="btn btn_arrow btn_arrow--next" onClick={() => test('next')}>
+                                <img src={arrowRight}/>
+                            </button>
                         </div>
-                        <p style={{
-                            color: "black",
-                            fontSize: "28px",
-                            fontWeight: 800,
-                            position: "absolute",
-                            top: "50%",
-                            zIndex: 1
-                        }}>{currentId}</p>
-                        <p className="announceDetail_carousel_currentImg" style={{
-                            color: "black",
-                            fontSize: "28px",
-                            fontWeight: 800,
-                            position: "absolute",
-                            top: "60%",
-                            zIndex: 1
-                        }}>{currentId + 1}/{totalImgs}</p>
+                        <p className="announceDetail_carousel_currentImg">{currentId + 1}/{totalImgs}</p>
                     </>
                 }
                 <div ref={carouselEl} className="announceDetail_carousel_imgWp" id="announceDetail_carousel_imgWp">
@@ -93,8 +81,7 @@ function Carousel({announce}) {
                         ))}
                     </div>
                 </div>
-            </div>
-        </>
+            </section>
     )
 }
 

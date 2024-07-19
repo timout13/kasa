@@ -24,18 +24,28 @@ function Infos({announce}) {
        return  announce.equipments.map((item,index)=><li key={index}>{item}</li>)
     }
     return (
-        <>
-            <Titles title={announce.title} subtitle={announce.location} />
-            <Profile name={announce.host.name} img={announce.host.picture}/>
-            {announce.tags.map((tag,index)=> <Tag key={tag+index} label={tag} />)}
-            {stars}
-            <Collapse title="Description"  >{announce.description}</Collapse>
-            <Collapse title="Équipements">
-                <ul>
-                    {getEquipments(announce)}
-                </ul>
-            </Collapse>
-        </>
+        <section className="announceDetail_infos section_py">
+            <div className="announceDetail_infos_left">
+                <Titles title={announce.title} subtitle={announce.location} />
+                <div className="announceDetail_infos_left_tagWp">
+                    {announce.tags.map((tag,index)=> <Tag key={tag+index} label={tag} />)}
+                </div>
+            </div>
+            <div className="announceDetail_infos_right">
+                <Profile name={announce.host.name} img={announce.host.picture}/>
+                <div className="announceDetail_infos_right_starsWp">
+                    {stars}
+                </div>
+            </div>
+            <div className="announceDetail_infos_collapsesWp">
+                <Collapse title="Description"  >{announce.description}</Collapse>
+                <Collapse title="Équipements">
+                    <ul>
+                        {getEquipments(announce)}
+                    </ul>
+                </Collapse>
+            </div>
+        </section>
     )
 }
 

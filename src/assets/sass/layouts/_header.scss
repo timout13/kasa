@@ -1,12 +1,13 @@
 .header {
+  margin-top: 45px;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-inline: 100px;
   &_linkswp{
     list-style: none;
     display: flex;
     gap: 30px;
+    align-items: center;
     &_item{
       &_link{
         &_active{

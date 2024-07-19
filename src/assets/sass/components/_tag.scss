@@ -1,0 +1,7 @@
+.tag {
+  background-color: $color-primary;
+  padding: 3px 30px;
+  border-radius: 10px;
+ @include font-tag();
+  cursor: default;
+}
