@@ -25,11 +25,7 @@ function Collapse({title, children}) {
                 className={`content ${isOpen ? 'open' : 'closed'}`}
             >
                 <p>
-                    This content is revealed with an animation when the element is clicked.
-                </p>
-                <img src="https://placebear.com/400/200" alt="Example" />
-                <p>
-                    Additional content here. Facilis ducimus iure officia quos possimus quaerat iusto.
+                    Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes àl station de la gare de l'est (7 minutes à pied).
                 </p>
             </div>
         </>
