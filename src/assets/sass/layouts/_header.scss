@@ -3,13 +3,25 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  &_logo{
+    height: auto;
+    @include media-inferior($breakpoints-s) {
+      width: 125px;
+    }
+  }
   &_linkswp{
     list-style: none;
     display: flex;
     gap: 30px;
     align-items: center;
+    @include media-inferior($breakpoints-s){
+      gap: 20px;
+    }
     &_item{
       &_link{
+        @include media-inferior($breakpoints-s){
+          font-size: 12px;
+        }
         &_active{
           text-decoration: underline;
         }

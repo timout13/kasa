@@ -6,7 +6,7 @@ function Header() {
     return (
         <>
             <header className="header section_py">
-                <img src={logo} />
+                <img className="header_logo" src={logo} />
                 <ul className="header_linkswp">
                     <li className="header_linkswp_item"><a className={`header_linkswp_item_link ${path === '/' && 'header_linkswp_item_link_active'}`} href="/">Accueil</a></li>
                     <li className="header_linkswp_item"><a className={`header_linkswp_item_link ${path === '/a-propos' && 'header_linkswp_item_link_active'}`}  href="/a-propos">À propos</a></li>

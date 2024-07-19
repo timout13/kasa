@@ -11,6 +11,9 @@
   font-size: 18px;
   font-weight: 500;
   color: #000;
+  @include media-inferior($breakpoints-s){
+    font-size: 14px;
+  }
 }
 @mixin font-announce-profile(){
   font-size: 18px;
@@ -18,6 +21,9 @@
   color: $color-primary;
   max-width: 120px;
   text-align: end;
+  @include media-inferior($breakpoints-s){
+    font-size: 12px;
+  }
 }
 
 /* * COMPONENTS * */
@@ -26,4 +32,7 @@
   font-size: 14px;
   color: white;
   font-weight: 700;
+  @include media-inferior($breakpoints-s){
+    font-size: 10px;
+  }
 }

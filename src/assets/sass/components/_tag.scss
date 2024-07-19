@@ -5,4 +5,7 @@
   width: max-content;
  @include font-tag();
   cursor: default;
+  @include media-inferior($breakpoints-s){
+    padding: 3px 20px;
+  }
 }

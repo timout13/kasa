@@ -46,11 +46,29 @@ h1 {
   width: 100%;
   justify-content: space-between;
 }
+.header_logo {
+  height: auto;
+}
+@media (max-width: 576px) {
+  .header_logo {
+    width: 125px;
+  }
+}
 .header_linkswp {
   list-style: none;
   display: flex;
   gap: 30px;
   align-items: center;
+}
+@media (max-width: 576px) {
+  .header_linkswp {
+    gap: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .header_linkswp_item_link {
+    font-size: 12px;
+  }
 }
 .header_linkswp_item_link_active {
   text-decoration: underline;
@@ -93,6 +111,11 @@ h1 {
   display: flex;
   gap: 10px;
 }
+@media (max-width: 576px) {
+  .announceDetail_infos_right_profile {
+    gap: 5px;
+  }
+}
 .announceDetail_infos_right_profile p {
   align-self: center;
   font-size: 18px;
@@ -100,6 +123,11 @@ h1 {
   color: #FF6060;
   max-width: 120px;
   text-align: end;
+}
+@media (max-width: 576px) {
+  .announceDetail_infos_right_profile p {
+    font-size: 12px;
+  }
 }
 .announceDetail_infos_right_profile img {
   width: 64px;
@@ -109,6 +137,16 @@ h1 {
 .announceDetail_infos_right_starsWp {
   display: flex;
   gap: 15px;
+}
+@media (max-width: 576px) {
+  .announceDetail_infos_right_starsWp {
+    gap: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .announceDetail_infos_right_starsWp .star {
+    width: 15px;
+  }
 }
 .announceDetail_infos_left {
   flex: 2;
@@ -136,6 +174,11 @@ h1 {
   font-size: 18px;
   font-weight: 500;
   color: #000;
+}
+@media (max-width: 576px) {
+  .announceDetail_infos_left_titles_subtitle {
+    font-size: 14px;
+  }
 }
 .announceDetail_infos_left_tagWp {
   display: flex;
@@ -262,6 +305,15 @@ img {
   border: 0;
   height: 80px;
 }
+@media (max-width: 576px) {
+  .btn_arrow {
+    height: 20px;
+  }
+}
+.btn_arrow img {
+  width: 100%;
+  height: 100%;
+}
 .btn_arrow--prev {
   padding-inline: 20px 0;
 }
@@ -340,6 +392,16 @@ img {
   color: white;
   font-weight: 700;
   cursor: default;
+}
+@media (max-width: 576px) {
+  .tag {
+    font-size: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .tag {
+    padding: 3px 20px;
+  }
 }
 
 .section_py {
