@@ -73,6 +73,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-block: 30px 50px;
+  gap: 20px;
 }
 .announceDetail_infos_right {
   flex: 1;
@@ -80,6 +81,13 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   gap: 20px;
+}
+@media (max-width: 836px) {
+  .announceDetail_infos_right {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 .announceDetail_infos_right_profile {
   display: flex;
@@ -103,11 +111,16 @@ h1 {
   gap: 15px;
 }
 .announceDetail_infos_left {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 20px;
+}
+@media (max-width: 836px) {
+  .announceDetail_infos_left {
+    min-width: 100%;
+  }
 }
 .announceDetail_infos_left_titles {
   display: flex;
@@ -115,7 +128,7 @@ h1 {
   gap: 10px;
 }
 .announceDetail_infos_left_titles_title {
-  font-size: 36px;
+  font-size: clamp(18px, 2vw + 1rem, 36px);
   color: #FF6060;
   font-weight: 500;
 }
@@ -127,6 +140,7 @@ h1 {
 .announceDetail_infos_left_tagWp {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .announceDetail_infos_collapsesWp {
   flex: 100%;
@@ -139,12 +153,21 @@ h1 {
 .announceDetail_carousel_btnWp {
   position: absolute;
   top: 50%;
-  left: 100px;
   z-index: 1;
   width: calc(100% - 200px);
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
+}
+@media (max-width: 1023px) {
+  .announceDetail_carousel_btnWp {
+    width: calc(100% - 100px);
+  }
+}
+@media (max-width: 576px) {
+  .announceDetail_carousel_btnWp {
+    width: calc(100% - 40px);
+  }
 }
 .announceDetail_carousel_currentImg {
   color: white;
@@ -312,6 +335,7 @@ img {
   background-color: #FF6060;
   padding: 3px 30px;
   border-radius: 10px;
+  width: max-content;
   font-size: 14px;
   color: white;
   font-weight: 700;
@@ -320,6 +344,16 @@ img {
 
 .section_py {
   padding-inline: 100px;
+}
+@media (max-width: 1023px) {
+  .section_py {
+    padding-inline: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .section_py {
+    padding-inline: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
