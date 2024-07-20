@@ -1,26 +1,36 @@
+
 .collapse{
-  &-details{
+  width: fit-content;
+
+  &_details{
     max-width: 500px;
-    overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
-    &[open] + .collapse-content{
-      max-height: fit-content; /* Set a max-height value enough to show all the content */
-      max-height: 800px; /* Set a max-height value enough to show all the content */
-      transition: max-height 400ms ease-out, border 0ms linear;
+    &.collapse_details[open] {
+      .collapse_details_summary_title::after {
+        transform: rotate(180deg);
+      }
     }
-    &[open] .collapse-details-summary-title::before {
-      rotate: 180deg;
-      transition: rotate 200ms ease-out;
-    }
-    &[open] .collapse-details-summary-title {
-      border-radius: 5px 5px 0px 0px ;
-      transition: border-radius 400ms ease-out;
-    }
-    &-summary{
-      display: block;
+    &_summary{
+      background-color: $color-primary;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
       &::-webkit-details-marker{
         display: none;
       }
-      &-title{
+      &::marker{
+        display: none;
+      }
+      &::after {
+        content: url("/src/assets/img/icons/arrow_top.svg");
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        margin-right: 0.5rem;
+        transition: rotate 200ms 400ms ease-out;
+      }
+      &_title{
         position: relative;
         display: flex;
         align-items: center;
@@ -28,58 +38,33 @@
         padding: 10px;
         font-size: 18px;
         font-weight: 800;
-        background: #FF6060;
+        background: $color-primary;
         border-radius: 5px;
         color: white;
         transition: border-radius 400ms ease-out;
         &:hover{
           cursor: pointer;
         }
-        &::before {
-          content: url("/src/assets/img/icons/arrow_top.svg");
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          margin-right: 0.5rem;
-          position: absolute;
-          right: 2px;
-          transition: rotate 200ms 400ms ease-out;
-        }
       }
     }
   }
-  &-content{
-    box-sizing: border-box;
-    max-width: 500px;
-    max-height: 0;
+  &_content{
+    background-color: #FBFBFB;
     overflow: hidden;
-    transition: max-height 400ms ease-out;
+    height: 0;
+    transition: height 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+    max-height: fit-content;
+    color: black;
+    max-width: 500px;
+    border: 0;
+    &--open{
+      opacity: 1;
+    }
     p{
       background: #FBFBFB;
       border-radius: 0px 0px 5px 5px;
       padding: 20px 20px 20px 20px;
     }
   }
-}
-.content {
-  background-color: #FBFBFB;
-  overflow: hidden;
-  height: 0;
-  transition: height 1s ease-out, opacity 1s ease-out;
-  opacity: 0;
-  max-height: fit-content;
-  color: black;
-  max-width: 500px;
-  border: 0;
-}
-
-.content.open {
-  opacity: 1;
-}
-
-summary {
-  background-color: #FF6060;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 10px;
 }

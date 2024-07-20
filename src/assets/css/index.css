@@ -321,30 +321,38 @@ img {
   padding-inline: 0 20px;
 }
 
-.collapse-details {
+.collapse {
+  width: fit-content;
+}
+.collapse_details {
   max-width: 500px;
-  overflow: hidden; /* Keep this line to prevent an odd blue outline around the element in Safari. */
 }
-.collapse-details[open] + .collapse-content {
-  max-height: fit-content; /* Set a max-height value enough to show all the content */
-  max-height: 800px; /* Set a max-height value enough to show all the content */
-  transition: max-height 400ms ease-out, border 0ms linear;
+.collapse_details.collapse_details[open] .collapse_details_summary_title::after {
+  transform: rotate(180deg);
 }
-.collapse-details[open] .collapse-details-summary-title::before {
-  rotate: 180deg;
-  transition: rotate 200ms ease-out;
+.collapse_details_summary {
+  background-color: #FF6060;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
-.collapse-details[open] .collapse-details-summary-title {
-  border-radius: 5px 5px 0px 0px;
-  transition: border-radius 400ms ease-out;
-}
-.collapse-details-summary {
-  display: block;
-}
-.collapse-details-summary::-webkit-details-marker {
+.collapse_details_summary::-webkit-details-marker {
   display: none;
 }
-.collapse-details-summary-title {
+.collapse_details_summary::marker {
+  display: none;
+}
+.collapse_details_summary::after {
+  content: url("/src/assets/img/icons/arrow_top.svg");
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  transition: rotate 200ms 400ms ease-out;
+}
+.collapse_details_summary_title {
   position: relative;
   display: flex;
   align-items: center;
@@ -357,27 +365,24 @@ img {
   color: white;
   transition: border-radius 400ms ease-out;
 }
-.collapse-details-summary-title:hover {
+.collapse_details_summary_title:hover {
   cursor: pointer;
 }
-.collapse-details-summary-title::before {
-  content: url("/src/assets/img/icons/arrow_top.svg");
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  margin-right: 0.5rem;
-  position: absolute;
-  right: 2px;
-  transition: rotate 200ms 400ms ease-out;
-}
-.collapse-content {
-  box-sizing: border-box;
-  max-width: 500px;
-  max-height: 0;
+.collapse_content {
+  background-color: #FBFBFB;
   overflow: hidden;
-  transition: max-height 400ms ease-out;
+  height: 0;
+  transition: height 1s ease-out, opacity 1s ease-out;
+  opacity: 0;
+  max-height: fit-content;
+  color: black;
+  max-width: 500px;
+  border: 0;
 }
-.collapse-content p {
+.collapse_content--open {
+  opacity: 1;
+}
+.collapse_content p {
   background: #FBFBFB;
   border-radius: 0px 0px 5px 5px;
   padding: 20px 20px 20px 20px;
