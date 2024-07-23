@@ -1,3 +1,21 @@
+.about{
+  margin-block: 50px 38px;
+
+  &_wp {
+    margin-top: 38px;
+    padding-inline: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include media-inferior($breakpoints-desktop){
+      padding-inline: 60px;
+    }
+    @include media-inferior($breakpoints-s){
+      padding-inline: 0;
+    }
+  }
+}
+
 /*
 Result Skip Results Iframe
 EDIT ON

@@ -239,6 +239,27 @@ h1 {
   object-position: center;
 }
 
+.about {
+  margin-block: 50px 38px;
+}
+.about_wp {
+  margin-top: 38px;
+  padding-inline: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 1023px) {
+  .about_wp {
+    padding-inline: 60px;
+  }
+}
+@media (max-width: 576px) {
+  .about_wp {
+    padding-inline: 0;
+  }
+}
+
 /*
 Result Skip Results Iframe
 EDIT ON
@@ -324,9 +345,6 @@ img {
 .collapse {
   width: fit-content;
 }
-.collapse_details {
-  max-width: 500px;
-}
 .collapse_details.collapse_details[open] .collapse_details_summary_title::after {
   transform: rotate(180deg);
 }
@@ -376,7 +394,6 @@ img {
   opacity: 0;
   max-height: fit-content;
   color: black;
-  max-width: 500px;
   border: 0;
 }
 .collapse_content--open {
@@ -386,6 +403,18 @@ img {
   background: #FBFBFB;
   border-radius: 0px 0px 5px 5px;
   padding: 20px 20px 20px 20px;
+}
+
+.hero {
+  width: 100%;
+}
+.hero img {
+  border-radius: 25px;
+  filter: brightness(0.7);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-height: 111px;
 }
 
 .tag {

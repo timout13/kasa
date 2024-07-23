@@ -23,11 +23,13 @@ function About() {
         },
     ]
     return (
-        <>
+        <section className="about section_py">
             <Hero img={hero} />
-            {faq.map((section,index)=> <Collapse key={section.title+index} title={section.title}>{section.content}</Collapse>)}
+            <div className="about_wp">
+                {faq.map((section,index)=> <Collapse key={section.title+index} title={section.title}>{section.content}</Collapse>)}
+            </div>
 
-        </>
+        </section>
     )
 }
 

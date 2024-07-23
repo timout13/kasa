@@ -1,14 +1,13 @@
 
 function Hero({img,title}) {
-    console.log(title);
     return (
-        <>
+        <div className="hero" aria-hidden="true">
             {img && title ? (
-                <img src={img} alt={title} />
+                <img  src={img} alt="image du hero" />
             ) : img ? (
-                <img src={img} alt="Default description" />
+                <img src={img} alt="image du hero" />
             ) : null}
-        </>
+        </div>
     )
 }
 
