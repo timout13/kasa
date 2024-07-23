@@ -6,9 +6,9 @@ function Location({location}) {
 
     return (
         <>
-            <Link to={url} state={location} className='location'
-                  style={{backgroundColor: '#FD6160', display: 'block', width: '150px', cursor: "pointer"}}>
-                <h2 style={{fontSize: "16px"}}>{location.title}</h2>
+            <Link to={url} state={location} className='location' style={{backgroundImage:`url(${location.cover})`}}>
+                <h2 className='location_title' style={{fontSize: "16px"}}>{location.title}</h2>
+               {/* <img className='location_img' src={location.cover} />*/}
             </Link>
         </>
     )
