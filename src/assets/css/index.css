@@ -321,6 +321,73 @@ p {
 img {
   max-width: 100%;
 }*/
+.error_404 {
+  margin-block: 139px;
+  display: flex;
+  flex-direction: column;
+  gap: 139px;
+}
+@media (max-width: 576px) {
+  .error_404 {
+    margin-block: 113px;
+    gap: 113px;
+  }
+}
+.error_404_title {
+  font-size: 288px;
+  font-weight: 800;
+  color: #FF6060;
+  text-align: center;
+  line-height: 218px;
+}
+@media (max-width: 1023px) {
+  .error_404_title {
+    font-size: 250px;
+    line-height: normal;
+  }
+}
+@media (max-width: 576px) {
+  .error_404_title {
+    font-size: 110px;
+  }
+}
+.error_404_subtitle {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+  text-align: center;
+  padding-inline: 30px;
+}
+@media (max-width: 1023px) {
+  .error_404_subtitle {
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .error_404_subtitle {
+    font-size: 12px;
+    padding-inline: 60px;
+  }
+}
+.error_404_link {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+@media (max-width: 1023px) {
+  .error_404_link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .error_404_link {
+    font-size: 12px;
+  }
+}
+
 .btn_arrow {
   background: 0;
   border: 0;

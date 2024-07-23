@@ -25,7 +25,48 @@
     font-size: 12px;
   }
 }
-
+// 404
+@mixin font-404-title(){
+  font-size: 288px;
+  font-weight: 800;
+  color: $color-primary;
+  text-align: center;
+  line-height: 218px;
+  @include media-inferior($breakpoints-desktop){
+    font-size: 250px;
+    line-height: normal;
+  }
+  @include media-inferior($breakpoints-s){
+    font-size: 110px;
+  }
+}
+@mixin font-404-subtitle(){
+  font-size: 36px;
+  font-weight: 500;
+  color: $color-primary;
+  text-align: center;
+  padding-inline: 30px;
+  @include media-inferior($breakpoints-desktop){
+    font-size: 36px;
+  }
+  @include media-inferior($breakpoints-s){
+    font-size: 12px;
+    padding-inline: 60px;
+  }
+}
+@mixin font-404-link(){
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+  @include media-inferior($breakpoints-desktop){
+    font-size: 18px;
+  }
+  @include media-inferior($breakpoints-s){
+    font-size: 12px;
+  }
+}
 /* * COMPONENTS * */
 
 @mixin font-tag(){

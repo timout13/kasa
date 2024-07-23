@@ -6,7 +6,7 @@ import About from './pages/About/about.jsx'
 import Announce from './pages/Announce'
 import Header from './components/header'
 import Footer from "./components/footer/index.jsx";
-import Error404 from './pages/Error/404.jsx'
+import Error404 from './pages/Error'
 import './assets/css/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
