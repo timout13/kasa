@@ -65,6 +65,11 @@ h1 {
     gap: 20px;
   }
 }
+.header_linkswp_item_link {
+  color: black;
+  font-weight: 500;
+  font-size: 24px;
+}
 @media (max-width: 576px) {
   .header_linkswp_item_link {
     font-size: 12px;
@@ -496,8 +501,9 @@ img {
 .collapse {
   width: fit-content;
 }
-.collapse_details.collapse_details[open] .collapse_details_summary_title::after {
+.collapse_details.collapse_details[open] .collapse_details_summary::after {
   transform: rotate(180deg);
+  transition: transform ease-in-out 500ms;
 }
 .collapse_details_summary {
   background-color: #FF6060;
@@ -519,7 +525,7 @@ img {
   display: flex;
   align-items: center;
   margin-right: 0.5rem;
-  transition: rotate 200ms 400ms ease-out;
+  transition: transform ease-out 500ms;
 }
 .collapse_details_summary_title {
   position: relative;

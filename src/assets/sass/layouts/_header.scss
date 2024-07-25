@@ -19,12 +19,7 @@
     }
     &_item{
       &_link{
-        @include media-inferior($breakpoints-s){
-          font-size: 12px;
-        }
-        &_active{
-          text-decoration: underline;
-        }
+        @include font-header();
       }
     }
   }
