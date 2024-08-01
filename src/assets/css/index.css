@@ -191,6 +191,7 @@ h1 {
 }
 @media (max-width: 836px) {
   .announceDetail_infos_right {
+    margin-bottom: 5px;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
@@ -199,11 +200,6 @@ h1 {
 .announceDetail_infos_right_profile {
   display: flex;
   gap: 10px;
-}
-@media (max-width: 576px) {
-  .announceDetail_infos_right_profile {
-    gap: 5px;
-  }
 }
 .announceDetail_infos_right_profile p {
   align-self: center;
@@ -246,6 +242,7 @@ h1 {
 }
 @media (max-width: 836px) {
   .announceDetail_infos_left {
+    margin-bottom: 5px;
     min-width: 100%;
   }
 }
@@ -276,6 +273,18 @@ h1 {
 }
 .announceDetail_infos_collapsesWp {
   flex: 100%;
+  display: flex;
+  gap: 60px;
+}
+@media (max-width: 768px) {
+  .announceDetail_infos_collapsesWp {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.announceDetail_infos_collapsesWp .collapse {
+  flex: 1;
+  min-width: 302px;
 }
 .announceDetail_carousel {
   position: relative;
@@ -317,6 +326,11 @@ h1 {
   height: 400px;
   overflow: hidden;
   border-radius: 25px;
+}
+@media (max-width: 576px) {
+  .announceDetail_carousel_imgWp {
+    height: 255px;
+  }
 }
 .announceDetail_carousel_imgWp_slider {
   display: flex;
@@ -547,14 +561,19 @@ img {
   background-color: #FBFBFB;
   overflow: hidden;
   height: 0;
-  transition: height 1s ease-out, opacity 1s ease-out;
+  transition: height 500ms ease-out, opacity 1s ease-out, padding 500ms ease-out;
   opacity: 0;
   max-height: fit-content;
   color: black;
   border: 0;
+  padding: 0px 20px;
+}
+.collapse_content ul {
+  list-style: none;
 }
 .collapse_content--open {
   opacity: 1;
+  padding-block: 30px;
 }
 .collapse_content p {
   background: #FBFBFB;

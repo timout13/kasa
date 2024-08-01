@@ -50,13 +50,18 @@
     background-color: #FBFBFB;
     overflow: hidden;
     height: 0;
-    transition: height 1s ease-out, opacity 1s ease-out;
+    transition: height 500ms ease-out, opacity 1s ease-out,padding 500ms ease-out;
     opacity: 0;
     max-height: fit-content;
     color: black;
     border: 0;
+    padding: 0px 20px;
+    ul{
+      list-style: none;
+    }
     &--open{
       opacity: 1;
+      padding-block: 30px;
     }
     p{
       background: #FBFBFB;
