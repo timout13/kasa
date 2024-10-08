@@ -36,11 +36,9 @@ function Announce() {
             {announce ? (
                     <>
                         <Carousel announce={announce} />
-                        <Infos announce={announce} />)
+                        <Infos announce={announce} />
                     </>
-                ) : (
-                    <div>Annonce non trouvée.</div>
-                )
+                ) : <div>Annonce non trouvée.</div>
             }
         </>
     );
