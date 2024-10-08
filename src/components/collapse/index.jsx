@@ -7,12 +7,12 @@ function Collapse({title,children}) {
     const handleToggle = (e) => {
         e.preventDefault();
         setIsOpen((prevIsOpen) => !prevIsOpen);
-        console.log(isOpen);
     };
 
     useEffect(() => {
         if (isOpen) {
-            contentRef.current.style.height = `${contentRef.current.scrollHeight}px`;
+            const height = contentRef.current.scrollHeight + 2*30;
+            contentRef.current.style.height = `${height}px`;
         } else {
             contentRef.current.style.height = '0px';
         }

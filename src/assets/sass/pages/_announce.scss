@@ -81,6 +81,9 @@
       .collapse{
         flex: 1;
         min-width: 302px;
+        @include media-inferior($breakpoints-s){
+          min-width: 100%;
+        }
       }
     }
   }

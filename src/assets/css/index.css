@@ -286,6 +286,11 @@ h1 {
   flex: 1;
   min-width: 302px;
 }
+@media (max-width: 576px) {
+  .announceDetail_infos_collapsesWp .collapse {
+    min-width: 100%;
+  }
+}
 .announceDetail_carousel {
   position: relative;
   width: 100%;
@@ -515,6 +520,16 @@ img {
 .collapse {
   width: fit-content;
 }
+@media (max-width: 576px) {
+  .collapse {
+    height: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .collapse_details {
+    height: 100%;
+  }
+}
 .collapse_details.collapse_details[open] .collapse_details_summary::after {
   transform: rotate(180deg);
   transition: transform ease-in-out 500ms;
@@ -526,6 +541,11 @@ img {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .collapse_details_summary {
+    height: 100%;
+  }
 }
 .collapse_details_summary::-webkit-details-marker {
   display: none;
@@ -553,6 +573,12 @@ img {
   border-radius: 5px;
   color: white;
   transition: border-radius 400ms ease-out;
+}
+@media (max-width: 576px) {
+  .collapse_details_summary_title {
+    font-size: 13px;
+    padding: 0;
+  }
 }
 .collapse_details_summary_title:hover {
   cursor: pointer;

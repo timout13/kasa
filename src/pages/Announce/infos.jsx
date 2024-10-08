@@ -9,8 +9,6 @@ import Tag from "./tag.jsx";
 import Star from "./star.jsx";
 import Collapse from "../../components/collapse/index.jsx";
 function Infos({announce}) {
-    console.log(announce.equipements)
-
     const stars = [];
     const redStarNb = parseInt(announce.rating);
     for (let i = 1; i <= 5; i++) {

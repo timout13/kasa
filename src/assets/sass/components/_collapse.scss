@@ -1,6 +1,12 @@
 .collapse{
   width: fit-content;
+  @include media-inferior($breakpoints-s){
+    height: 30px;
+  }
   &_details{
+    @include media-inferior($breakpoints-s){
+      height: 100%;
+    }
     &.collapse_details[open] {
       .collapse_details_summary::after {
         transform: rotate(180deg);
@@ -14,6 +20,9 @@
       padding: 10px;
       display: flex;
       justify-content: space-between;
+      @include media-inferior($breakpoints-s){
+        height: 100%;
+      }
       &::-webkit-details-marker{
         display: none;
       }
@@ -40,6 +49,11 @@
         border-radius: 5px;
         color: white;
         transition: border-radius 400ms ease-out;
+        @include media-inferior($breakpoints-s){
+          font-size: 13px;
+          padding: 0;
+          //height: initial;
+        }
         &:hover{
           cursor: pointer;
         }

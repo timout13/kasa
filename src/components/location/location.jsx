@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 function Location({location}) {
-    //console.log(location);
     const url = `/location/${location.id}`;
 
     return (
