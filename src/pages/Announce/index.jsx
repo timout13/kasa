@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Carousel from "./carousel.jsx";
 import Infos from "./infos.jsx";
 import { DataContext } from "../../utils/context";
@@ -8,13 +8,15 @@ function Announce() {
     const { data, isLoading, error } = useContext(DataContext);
     const { idLocation } = useParams();
     const [announces, setAnnounces] = useState([]);
-
+    const [loadState, setLoadState] = useState(true);
     useEffect(() => {
         if (data) {
             setAnnounces(data);
+            setLoadState(false);
+        }else{
+            setLoadState(true);
         }
     }, [data]);
-
     const announce = announces.find(announce => announce.id === idLocation);
 
     if (isLoading) {
@@ -25,14 +27,21 @@ function Announce() {
         return <div>Erreur: {error.message}</div>;
     }
 
-    if (!announce) {
-        return <div>Annonce non trouvée</div>;
+    if (!announce && !loadState) {
+        return <Navigate to="/erreur" replace={true}/>;
     }
 
     return (
         <>
-            <Carousel announce={announce} />
-            <Infos announce={announce} />
+            {announce ? (
+                    <>
+                        <Carousel announce={announce} />
+                        <Infos announce={announce} />)
+                    </>
+                ) : (
+                    <div>Annonce non trouvée.</div>
+                )
+            }
         </>
     );
 }
