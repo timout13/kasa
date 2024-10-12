@@ -15,14 +15,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <>
         <Router>
             <Header/>
-                <DataProvider>
+            <DataProvider>
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/a-propos" element={<About/>}></Route>
                 <Route path="/location/:idLocation" element={<Announce/>}></Route>
                 <Route path="/*" element={<Error404/>}></Route>
             </Routes>
-                </DataProvider>
+            </DataProvider>
             <Footer/>
         </Router>
     </>

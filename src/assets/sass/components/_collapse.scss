@@ -1,5 +1,7 @@
 .collapse{
   width: fit-content;
+  max-width: 1000px;
+  margin-inline: auto;
   &_details{
     &.collapse_details[open] {
       .collapse_details_summary::after {

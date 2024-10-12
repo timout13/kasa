@@ -7,5 +7,10 @@
     @include media-inferior($breakpoints-s){
       padding-inline: 20px;
     }
+    @include media-superior("1812px"){
+      max-width: 1700px;
+      margin-inline: auto;
+      width: 100%;
+    }
   }
 }

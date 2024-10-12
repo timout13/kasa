@@ -329,6 +329,11 @@ h1 {
   z-index: 1;
   transform: translateX(-50%);
 }
+@media (max-width: 576px) {
+  .announceDetail_carousel_currentImg {
+    display: none;
+  }
+}
 .announceDetail_carousel_imgWp {
   display: flex;
   width: 100%;
@@ -523,6 +528,8 @@ img {
 
 .collapse {
   width: fit-content;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 .collapse_details.collapse_details[open] .collapse_details_summary::after {
   transform: rotate(180deg);
@@ -682,6 +689,13 @@ img {
 @media (max-width: 576px) {
   .section_py {
     padding-inline: 20px;
+  }
+}
+@media (min-width: 1812px) {
+  .section_py {
+    max-width: 1700px;
+    margin-inline: auto;
+    width: 100%;
   }
 }
 

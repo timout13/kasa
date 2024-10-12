@@ -116,6 +116,9 @@
       left: 50%;
       z-index: 1;
       transform: translateX(-50%);
+      @include media-inferior($breakpoints-s){
+        display: none;
+      }
     }
     &_imgWp {
       display: flex;
